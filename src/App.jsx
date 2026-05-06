@@ -1,35 +1,9 @@
 import { useState } from "react";
 import "./App.css";
+import logo from './assets/uaf-logo.png';
+import { animals, places } from './data.js';
 
 export default function UnlikelyAnimalFriendsPage() {
-  const animals = [
-    "Bumble bee",
-    "Duck",
-    "Shark",
-    "Butterfly",
-    "Fox",
-    "Whale",
-    "Otter",
-    "Frog",
-    "Cat",
-    "Raccoon",
-    "Penguin",
-    "Snail",
-  ];
-
-  const places = [
-    "In a cave",
-    "At the beach",
-    "In a bakery",
-    "In space",
-    "At a tea party",
-    "On a mountain",
-    "Inside a lighthouse",
-    "In a flower field",
-    "At the library",
-    "In the rain",
-  ];
-
   const randomItem = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
   const [prompt, setPrompt] = useState({
@@ -50,23 +24,12 @@ export default function UnlikelyAnimalFriendsPage() {
     <div className="page">
       <section className="hero">
         <div className="logo-section">
-          <div className="logo-icons">
-            <div className="icon shark">🦈</div>
-            <div className="icon duck">🐤</div>
-            <div className="heart">🩷</div>
-          </div>
+          <img src={logo} alt="Unlikely Animal Friends Logo" className="logo" style={{width: '33.33%', height: 'auto'}} />
 
-          <h1 className="title">
-            Unlikely
-            <br />
-            Animal
-            <br />
-            Friends
-          </h1>
         </div>
 
-        <div className="generator">
-          <h2>Generate your prompt</h2>
+        <div id="generator" className="generator">
+          <h3>Generate your prompt</h3>
 
           <div className="cards">
             <PromptCard label="Animal" value={prompt.animal1} />
@@ -80,7 +43,7 @@ export default function UnlikelyAnimalFriendsPage() {
         </div>
       </section>
 
-      <section className="about">
+      <section id="about" className="about">
         <div className="about-inner">
           <h3>About</h3>
 
@@ -107,14 +70,12 @@ export default function UnlikelyAnimalFriendsPage() {
 
       <footer className="footer">
         <div className="footer-links">
-          <a href="#">Terms of service</a>
-          <a href="#">Privacy policy</a>
-          <a href="#">About</a>
-          <a href="#">Generate ideas</a>
-          <a href="#">Ko-fi</a>
+          <a href="#about">About</a>
+          <a href="#generator">Generate ideas</a>
+          <a href="https://ko-fi.com/marwaberry">Ko-fi</a>
         </div>
 
-        <p>Design by Marwa</p>
+        <p>Design by <a href="https://marwa.gorvan.com">Marwa</a></p>
       </footer>
     </div>
   );
