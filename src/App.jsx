@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import logo from './assets/uaf-logo.png';
+import logo from './assets/uaf-logo-02.png';
 import { animals, places } from './data.js';
 
 export default function UnlikelyAnimalFriendsPage() {
@@ -25,22 +25,21 @@ export default function UnlikelyAnimalFriendsPage() {
       <section className="hero">
         <div className="logo-section">
           <img src={logo} alt="Unlikely Animal Friends Logo" className="logo" style={{width: '33.33%', height: 'auto'}} />
+        </div>
+      </section>
 
+      <section id="generator" className="generator">
+        <h3>Generate your prompt</h3>
+
+        <div className="cards">
+          <PromptCard label="Animal" value={prompt.animal1} />
+          <PromptCard label="Animal" value={prompt.animal2} />
+          <PromptCard label="Place" value={prompt.place} />
         </div>
 
-        <div id="generator" className="generator">
-          <h3>Generate your prompt</h3>
-
-          <div className="cards">
-            <PromptCard label="Animal" value={prompt.animal1} />
-            <PromptCard label="Animal" value={prompt.animal2} />
-            <PromptCard label="Place" value={prompt.place} />
-          </div>
-
-          <button onClick={generatePrompt} className="generate-btn">
-            Generate an unlikely prompt
-          </button>
-        </div>
+        <button onClick={generatePrompt} className="generate-btn">
+          Generate an unlikely prompt
+        </button>
       </section>
 
       <section id="about" className="about">
