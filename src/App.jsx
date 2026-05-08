@@ -13,9 +13,16 @@ export default function UnlikelyAnimalFriendsPage() {
   });
 
   const generatePrompt = () => {
+    const animal1 = randomItem(animals);
+    let animal2 = randomItem(animals);
+
+    while (animal2 === animal1) {
+      animal2 = randomItem(animals);
+    }
+
     setPrompt({
-      animal1: randomItem(animals),
-      animal2: randomItem(animals),
+      animal1,
+      animal2,
       place: randomItem(places),
     });
   };

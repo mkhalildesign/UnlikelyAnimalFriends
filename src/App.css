@@ -5,6 +5,7 @@ body {
   font-family: 'Inter', sans-serif;
   background: #f0c1d1;
   color: #111;
+  color: black;
 }
 
 div#root {
