@@ -35,10 +35,10 @@ div#root {
 }
 
 .generator {
-  background-color: #ffffff;
-  opacity: 0.8;
-  background-image:  linear-gradient(#F6B0B0 1px, transparent 1px), linear-gradient(to right, #F6B0B0 1px, #ffffff 1px);
+  background-color: rgba(255, 255, 255, 1.0);
+  background-image:  linear-gradient(#F6B0B0 1px, transparent 1px), linear-gradient(to right, #F6B0B0 1px, rgba(255, 255, 255, 0.8) 1px);
   background-size: 20px 20px;
+  padding: 50px 24px;
 }
 
 .logo-section {
@@ -61,29 +61,6 @@ div#root {
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
-.shark {
-  width: 110px;
-  height: 110px;
-  border-radius: 999px;
-  background: #7aa5c2;
-  font-size: 48px;
-}
-
-.duck {
-  width: 80px;
-  height: 80px;
-  border-radius: 999px;
-  background: #fffdf8;
-  font-size: 38px;
-}
-
-.heart {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  font-size: 28px;
-}
-
 .title {
   font-family: 'Nunito', sans-serif;
   font-size: 64px;
@@ -96,11 +73,13 @@ div#root {
 .about h3 {
   font-family: 'Nunito', sans-serif;
   font-weight: 800;
+  color: #000000;
 }
 
 .generator h3 {
   font-size: 56px;
   margin-bottom: 40px;
+  color: #353535;
 }
 
 .cards {
@@ -113,28 +92,36 @@ div#root {
 }
 
 .prompt-card {
-  background: #f8f5ec;
+  background: #ffffff;
   border-radius: 32px;
   padding: 48px 32px;
-  border: 2px dashed #e8dfc9;
+  border: 2px solid #000000;
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  width: 250px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .label {
   margin-bottom: 50px;
-  font-size: 24px;
+  font-size: 18px;
 }
 
 .value {
-  font-size: 36px;
+  font-size: 24px;
   font-weight: bold;
+  line-height: 1.2;
 }
 
 .generate-btn {
   margin-top: 50px;
-  background: #113d5b;
-  color: white;
-  border: none;
+  background: white;
+  color: #353535;
+  border: 2px solid #353535;
   padding: 18px 34px;
   border-radius: 12px;
   font-size: 18px;
@@ -147,7 +134,7 @@ div#root {
 }
 
 .about {
-  background: #f5f1e5;
+  background: #ffffff;
   padding: 100px 24px;
 }
 

@@ -32,8 +32,8 @@ export default function UnlikelyAnimalFriendsPage() {
         <h3>Generate your prompt</h3>
 
         <div className="cards">
-          <PromptCard label="Animal" value={prompt.animal1} />
-          <PromptCard label="Animal" value={prompt.animal2} />
+          <PromptCard label="First animal" value={prompt.animal1} />
+          <PromptCard label="Second animal" value={prompt.animal2} />
           <PromptCard label="Place" value={prompt.place} />
         </div>
 
