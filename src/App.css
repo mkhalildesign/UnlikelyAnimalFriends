@@ -4,7 +4,7 @@ body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   background: #f0c1d1;
-  color: #111827;
+  color: #111;
 }
 
 div#root {
@@ -79,7 +79,7 @@ div#root {
 .generator h3 {
   font-size: 56px;
   margin-bottom: 40px;
-  color: #353535;
+  color: #000000;
 }
 
 .cards {
@@ -119,8 +119,8 @@ div#root {
 
 .generate-btn {
   margin-top: 50px;
-  background: white;
-  color: #353535;
+  background: #353535;
+  color: #f0c1d1;
   border: 2px solid #353535;
   padding: 18px 34px;
   border-radius: 12px;
