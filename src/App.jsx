@@ -9,7 +9,7 @@ export default function UnlikelyAnimalFriendsPage() {
   const [prompt, setPrompt] = useState({
     animal1: "Bumble bee",
     animal2: "Duck",
-    place: "In a cave",
+    activity: "In a cave",
   });
 
   const generatePrompt = () => {
@@ -23,7 +23,7 @@ export default function UnlikelyAnimalFriendsPage() {
     setPrompt({
       animal1,
       animal2,
-      place: randomItem(places),
+      activity: randomItem(places),
     });
   };
 
@@ -41,7 +41,7 @@ export default function UnlikelyAnimalFriendsPage() {
         <div className="cards">
           <PromptCard label="First animal" value={prompt.animal1} />
           <PromptCard label="Second animal" value={prompt.animal2} />
-          <PromptCard label="Place" value={prompt.place} />
+          <PromptCard label="Activity" value={prompt.activity} />
         </div>
 
         <button onClick={generatePrompt} className="generate-btn">
